@@ -1,45 +1,41 @@
 import React, { Component } from 'react';
-import { Link } from "react-router";
 
 export default class Navbar extends Component {
     render() {
         return (
             <div>
 
-                <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <div className="container-fluid">
-                        <Link className="navbar-brand offset-sm-1" to="/">
-                            News Flow
-                        </Link>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
+                        <a className="navbar-brand" href="#">News Flow</a>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div
-                            className="collapse navbar-collapse offset-4"
-                            id="navbarSupportedContent"
-                        >
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
+                        <div className="collapse navbar-collapse" id="navbarScroll">
+                            <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/">
-                                        Home
-                                    </a>
+                                    <a className="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
-
-                                <li className="nav-item"><Link className="nav-link" to="/">Entertainment</Link></li>
-                                <li className="nav-item"><Link className="nav-link" to="/">Science</Link></li>
-                                <li className="nav-item"><Link className="nav-link" to="/">Sports</Link></li>
-                                <li className="nav-item"><Link className="nav-link" to="/">Business</Link></li>
-                                <li className="nav-item"><Link className="nav-link" to="/">Health</Link></li>
-                                
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">Space</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link">Science</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link">Entertainment</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link">Politics</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link">Sports</a>
+                                </li>
                             </ul>
+                            <form className="d-flex">
+                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                                <button class ="btn btn-outline-success" type ="submit">Search</button>
+                            </form>
                         </div>
                     </div>
                 </nav>
