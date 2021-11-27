@@ -11,6 +11,8 @@ import {
 
 export default class App extends Component {
 
+  apikey = process.env.REACT_APP_NEWS_API;
+
   state ={
     progress:0
   }
@@ -28,13 +30,13 @@ export default class App extends Component {
         />
         <Navbar />
         <Switch>
-          <Route exact path="/"> <News setProgress={this.setProgress} key="a1" pageSize="5" country="us" category="general" /> </Route>
-          <Route exact path="/general"> <News setProgress={this.setProgress} key="ge" pageSize="5" country="us" category="general" /> </Route>
-          <Route exact path="/Space"> <News setProgress={this.setProgress} key="space" pageSize="5" country="us" category="Space" /> </Route>
-          <Route exact path="/Science"> <News setProgress={this.setProgress} key="science" pageSize="5" country="us" category="Science" /> </Route>
-          <Route exact path="/Entertainment"> <News setProgress={this.setProgress} key="entertainment" pageSize="5" country="us" category="Entertainment" /> </Route>
-          <Route exact path="/Politics"> <News setProgress={this.setProgress} key="politics" pageSize="5" country="us" category="Politics" /> </Route>
-          <Route exact path="/Sports"> <News setProgress={this.setProgress} key="sports" pageSize="5" country="us" category="Sports" /> </Route>
+          <Route exact path="/"> <News setProgress={this.setProgress} apikey={this.apikey} key="a1" pageSize="5" country="us" category="general" /> </Route>
+          <Route exact path="/general"> <News setProgress={this.setProgress} apikey={this.apikey} key="ge" pageSize="5" country="us" category="general" /> </Route>
+          <Route exact path="/Space"> <News setProgress={this.setProgress} apikey={this.apikey} key="space" pageSize="5" country="us" category="Space" /> </Route>
+          <Route exact path="/Science"> <News setProgress={this.setProgress} apikey={this.apikey} key="science" pageSize="5" country="us" category="Science" /> </Route>
+          <Route exact path="/Entertainment"> <News setProgress={this.setProgress} apikey={this.apikey} key="entertainment" pageSize="5" country="us" category="Entertainment" /> </Route>
+          <Route exact path="/Politics"> <News setProgress={this.setProgress} apikey={this.apikey} key="politics" pageSize="5" country="us" category="Politics" /> </Route>
+          <Route exact path="/Sports"> <News setProgress={this.setProgress} apikey={this.apikey} key="sports" pageSize="5" country="us" category="Sports" /> </Route>
         </Switch>
       </Router>
     </div>
