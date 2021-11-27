@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar';
 import News from './Components/News';
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route
 } from 'react-router-dom';
 
@@ -13,15 +13,15 @@ function App() {
     <div>
       <Router>
         <Navbar />
-        <Routes>
-          <Route exact path="/" element={<News key="general" pageSize="5" country="us" category="general" />} />
-          <Route exact path="/general" element={<News key="ge" pageSize="5" country="us" category="general" />} />
-          <Route exact path="/Space" element={<News key="space" pageSize="5" country="us" category="Space" />} />
-          <Route exact path="/Science" element={<News key="science" pageSize="5" country="us" category="Science" />} />
-          <Route exact path="/Entertainment" element={<News key="entertainment" pageSize="5" country="us" category="Entertainment" />} />
-          <Route exact path="/Politics" element={<News key="politics" pageSize="5" country="us" category="Politics" />} />
-          <Route exact path="/Sports" element={<News key="sports" pageSize="5" country="us" category="Sports" />} />
-        </Routes>
+        <Switch>
+          <Route exact path="/"> <News key="general" pageSize="5" country="us" category="general" /> </Route>
+          <Route exact path="/general"> <News key="ge" pageSize="5" country="us" category="general" /> </Route>
+          <Route exact path="/Space"> <News key="space" pageSize="5" country="us" category="Space" /> </Route>
+          <Route exact path="/Science"> <News key="science" pageSize="5" country="us" category="Science" /> </Route>
+          <Route exact path="/Entertainment"> <News key="entertainment" pageSize="5" country="us" category="Entertainment" /> </Route>
+          <Route exact path="/Politics"> <News key="politics" pageSize="5" country="us" category="Politics" /> </Route>
+          <Route exact path="/Sports"> <News key="sports" pageSize="5" country="us" category="Sports" /> </Route>
+        </Switch>
       </Router>
     </div>
   );
