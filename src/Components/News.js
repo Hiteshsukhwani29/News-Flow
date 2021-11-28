@@ -42,7 +42,7 @@ export default class News extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{marginTop:"90px"}}>
                 {this.state.loading && <Spinner />}
                 <InfiniteScroll
                     dataLength={this.state.articles.length} 
